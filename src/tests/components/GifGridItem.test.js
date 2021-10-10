@@ -3,6 +3,7 @@ import { shallow } from 'enzyme'
 import GifGridItem from '../../components/GifGridItem'
 
 
+
 describe('pruebas en GifGridItem', () => {
     
     const title = 'Soy un titulo';
@@ -33,10 +34,16 @@ describe('pruebas en GifGridItem', () => {
         
         expect( img.prop('src') ).toBe( url );
         expect( img.prop('alt') ).toBe( title );
+               
+    });
+
+    test('debe de tener animate__fadeIn', () => {
+
+        const div = wrapper.find( 'div' );
+        expect(div.hasClass('animate__fadeIn')).toEqual( true );
         
-        
-        
-    })
+    });
+    
     
 
 })

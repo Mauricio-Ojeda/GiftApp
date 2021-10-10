@@ -6,7 +6,7 @@ const GifGridItem = ({ title, url }) => {
     
         
     return (
-        <div className="card animate__lightSpeedInRight animate__backInLeft">
+        <div className="card animate__lightSpeedInRight animate__fadeIn">
             <img src={ url } alt={ title } />
             <p>{ title }</p>
         </div>
@@ -14,7 +14,7 @@ const GifGridItem = ({ title, url }) => {
 }
 
 GifGridItem.propTypes = {
-    
+
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
 }

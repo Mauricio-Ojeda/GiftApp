@@ -2,7 +2,7 @@
 
 exports[`pruebas en GifGridItem debe mostrar el componente en un snapshot 1`] = `
 <div
-  className="card animate__lightSpeedInRight animate__backInLeft"
+  className="card animate__lightSpeedInRight animate__fadeIn"
 >
   <img
     alt="Soy un titulo"
