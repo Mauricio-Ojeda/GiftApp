@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en GifGridItem debe mostrar el componente en un snapshot 1`] = `
+<div
+  className="card animate__lightSpeedInRight animate__backInLeft"
+>
+  <img
+    alt="Soy un titulo"
+    src="https://soyunaurl.localhost.jpg"
+  />
+  <p>
+    Soy un titulo
+  </p>
+</div>
+`;
