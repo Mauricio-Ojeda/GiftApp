@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en AddCategory debe de mostrar un snapshot del codigo html de Addcategory 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Busca tu Gift"
+    type="text"
+    value=""
+  />
+</form>
+`;
