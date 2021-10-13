@@ -8,7 +8,14 @@ describe('pruebas en AddCategory', () => {
 
     const setCategories = jest.fn();
     
-    const wrapper = shallow( <AddCategory setCategories = { setCategories } />);
+    let wrapper = shallow( <AddCategory setCategories = { setCategories } />);
+
+    beforeEach( ()=>{ 
+
+        jest.clearAllMocks()
+        wrapper = shallow( <AddCategory setCategories = { setCategories } />);
+
+     } )
 
     test('debe de mostrar un snapshot del codigo html de Addcategory', () => {
         
@@ -26,11 +33,23 @@ describe('pruebas en AddCategory', () => {
 
     test('no debe postear la informacion si el input esta vacio', () => {
         
-        wrapper.find('form').simulate('submit', { pereventDefault(){  }});
+        wrapper.find('form').simulate('submit', { preventDefault(){  } });
 
-        expect( setCategories ).not.toHaveBeenColled();
+        expect( setCategories ).not.toHaveBeenCalled();
+    });
+
+    test('debe de llamar setCategories y limpiar la caja de texto', () => {
+        const setInputValue = jest.fn()
+
+        const input = wrapper.find('input');
+        const value = 'hola Prisma'
+        input.simulate('change', { target: { value } });
+        wrapper.find('form').simulate('submit', { preventDefault(){  } });
+
+        console.log(input.simulate('change', { target: { value } }).html().valueOf())
 
     })
+    
     
     
     
