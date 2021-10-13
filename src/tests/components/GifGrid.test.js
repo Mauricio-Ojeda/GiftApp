@@ -30,7 +30,8 @@ describe('pruebas en GifGrid', () => {
             id: 'abc',
             url: 'https://localhost.gato.jpg',
             title: 'cualquiera'
-        }]
+        }];
+
         useFetchGifs.mockReturnValue({
             data: gifs,
             loading: true
@@ -38,8 +39,8 @@ describe('pruebas en GifGrid', () => {
         
         const wrapper = shallow( <GifGrid category = { category } /> );
 
-        expect( wrapper ).toMatchSnapshot();
-
+        expect(wrapper.find('h2').exists()).toBe(true);
+        expect( wrapper.find('GifGridItem').length ).toBe( gifs.length );
     })
     
     

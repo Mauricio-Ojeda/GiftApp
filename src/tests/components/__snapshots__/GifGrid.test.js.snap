@@ -15,26 +15,3 @@ exports[`pruebas en GifGrid crear snapshot de GifGrid 1`] = `
   />
 </Fragment>
 `;
-
-exports[`pruebas en GifGrid debe mostrar items cuando cargan las imagenes de useFetchGifs 1`] = `
-<Fragment>
-  <h3>
-    hola Prisma
-  </h3>
-  <h2
-    className=" animate__hinge "
-  >
-     Cargando... 🐱‍🏍
-  </h2>
-  <div
-    className="card-grid "
-  >
-    <GifGridItem
-      id="abc"
-      key="abc"
-      title="cualquiera"
-      url="https://localhost.gato.jpg"
-    />
-  </div>
-</Fragment>
-`;
