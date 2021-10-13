@@ -39,15 +39,17 @@ describe('pruebas en AddCategory', () => {
     });
 
     test('debe de llamar setCategories y limpiar la caja de texto', () => {
-        const setInputValue = jest.fn()
-
-        const input = wrapper.find('input');
+        
         const value = 'hola Prisma'
+        const input = wrapper.find('input');
+        
         input.simulate('change', { target: { value } });
-        wrapper.find('form').simulate('submit', { preventDefault(){  } });
+        
+        wrapper.find('form').simulate('submit', { preventDefault(){} });
 
-        console.log(input.simulate('change', { target: { value } }).html().valueOf())
-
+        expect( setCategories ).toHaveBeenCalled();
+        
+        expect(input.prop('value')).toBe('');        
     })
     
     
