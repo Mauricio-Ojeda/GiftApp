@@ -13,8 +13,7 @@ const AddCategory = ({ setCategories }) => {
     const handleSubmit = e => {
         e.preventDefault();
         
-        console.log('llamado de handleSubmit ' + inputValue );
-
+        
         if( inputValue.trim().length > 0){
             setCategories(categories => [ inputValue, ...categories ]);
             setinputValue('');    
