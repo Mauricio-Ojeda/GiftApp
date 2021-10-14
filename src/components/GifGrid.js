@@ -10,7 +10,8 @@ const GifGrid = ({ category }) => {
     const {data: images, loading} = useFetchGifs( category );
     
     return (
-        <>
+        <>  
+            
             <h3>{ category }</h3>
 
             { loading && <h2 className=" animate__hinge "> Cargando... 🐱‍🏍</h2> }
